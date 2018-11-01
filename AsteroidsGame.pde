@@ -1,5 +1,8 @@
 Spaceship ship = new Spaceship();
-//your variable declarations here
+boolean wPressed = false;
+boolean aPressed = false;
+boolean sPressed = false;
+boolean dPressed = false;
 
 public void setup() 
 {
@@ -9,23 +12,51 @@ public void setup()
 }
 public void draw() 
 {
-	background(255);
+	background(0);
 	ship.show();
 	ship.move();
+
+	if(wPressed == true){
+		ship.accelerate(.1);
+	}
+	if(sPressed == true){
+		ship.accelerate(-.1);
+
+	}
+	if(aPressed == true){
+		ship.turn(-7);
+	}
+	if(dPressed == true){
+		ship.turn(7);
+	}
 }
 
 public void keyPressed(){
 	if(key == 'w'){
-		ship.accelerate(0.1);
+		wPressed = true;
 	}
 	if(key == 'a'){
-		ship.turn(-5);
+		aPressed = true;
 	}
 	if(key == 'd'){
-		ship.turn(5);
+		dPressed = true;
 	}
 	if(key == 's'){
-		ship.accelerate(-0.1);
+		sPressed = true;
 	}
 }
 
+public void keyReleased(){
+	if(key == 'w'){
+		wPressed = false;
+	}
+	if(key == 'a'){
+		aPressed = false;
+	}
+	if(key == 'd'){
+		dPressed = false;
+	}
+	if(key == 's'){
+		sPressed = false;
+	}
+}

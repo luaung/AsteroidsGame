@@ -1,4 +1,6 @@
 Spaceship ship = new Spaceship();
+Star[] sky = new Star[200];
+
 boolean wPressed = false;
 boolean aPressed = false;
 boolean sPressed = false;
@@ -9,18 +11,24 @@ public void setup()
 	size(1000,1000);
 	ship.setX(500);
 	ship.setY(500);
+	for(int i = 0; i< sky.length; i++){
+		sky[i] = new Star();
+	}
 }
 public void draw() 
 {
 	background(0);
+	for(int i = 0; i< sky.length; i++){
+		sky[i].show();
+	}
 	ship.show();
 	ship.move();
 
 	if(wPressed == true){
-		ship.accelerate(.1);
+		ship.accelerate(.3);
 	}
 	if(sPressed == true){
-		ship.accelerate(-.1);
+		ship.accelerate(-.3);
 
 	}
 	if(aPressed == true){
@@ -29,9 +37,15 @@ public void draw()
 	if(dPressed == true){
 		ship.turn(7);
 	}
+
+
 }
 
+
 public void keyPressed(){
+	if(key == ' '){
+		ship.hyperspace();
+	}
 	if(key == 'w'){
 		wPressed = true;
 	}

@@ -13,6 +13,13 @@ class Spaceship extends Floater
       }
    }
    
+   public void hyperspace(){
+      ship.setX((int)(Math.random()*1000));
+      ship.setY((int)(Math.random()*1000));
+      ship.setPointDirection((int)(Math.random()*360));
+      ship.setDirectionX(0);
+      ship.setDirectionY(0);
+}
 
    public void setX(int x){myCenterX = x;}  
    public int getX(){return (int)myCenterX;}   

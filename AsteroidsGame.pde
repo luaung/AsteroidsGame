@@ -25,10 +25,10 @@ public void draw()
 	ship.move();
 
 	if(wPressed == true){
-		ship.accelerate(.3);
+		ship.accelerate(.2);
 	}
 	if(sPressed == true){
-		ship.accelerate(-.3);
+		ship.accelerate(-.2);
 
 	}
 	if(aPressed == true){

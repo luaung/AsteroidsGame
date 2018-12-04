@@ -11,6 +11,12 @@ class Spaceship extends Floater
          xCorners[i]*=1.3;
          yCorners[i]*=1.3;
       }
+
+      myCenterX = 500;
+      myCenterY = 500;
+      myPointDirection = 0;
+      myDirectionX = 0;
+      myDirectionY = 0;
    }
    
    public void hyperspace(){

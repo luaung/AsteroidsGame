@@ -5,14 +5,14 @@ class Bullet extends Floater
 		myCenterY = ship.getY();
 		myPointDirection = ship.getPointDirection();
 		double dRadians =myPointDirection*(Math.PI/180);
-		myDirectionX = 5*Math.cos(dRadians) + ship.getDirectionX();
-		myDirectionY = 5*Math.sin(dRadians) + ship.getDirectionY();
+		myDirectionX = 7*Math.cos(dRadians) + ship.getDirectionX();
+		myDirectionY = 7*Math.sin(dRadians) + ship.getDirectionY();
 		myColor = 255;
 	}
 
 	public void show(){
-		fill(0,0,255);
-		ellipse((int)myCenterX,(int)myCenterY,20,20);
+		fill(17, 221, 221);
+		ellipse((int)myCenterX,(int)myCenterY,10,10);
 	}
 	public void setX(int x){myCenterX = x;}  
     public int getX(){return (int)myCenterX;}   

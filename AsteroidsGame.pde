@@ -5,6 +5,7 @@ boolean wPressed = false;
 boolean aPressed = false;
 boolean sPressed = false;
 boolean dPressed = false;
+//boolean shoot = false;
 
 
 ArrayList <Bullet> bullet = new ArrayList <Bullet>();
@@ -87,7 +88,9 @@ public void draw()
 	if(dPressed == true){
 		ship.turn(7);
 	}
-
+	/*if(shoot == true){
+		bullet.add(new Bullet(ship));
+	}*/
 
 }
 
@@ -108,6 +111,11 @@ public void keyPressed(){
 	if(key == 's'){
 		sPressed = true;
 	}
+	/*if(key == CODED){
+		if(keyCode == UP){
+			shoot = true;
+		}
+	}*/
 }
 
 public void keyReleased(){
@@ -123,8 +131,13 @@ public void keyReleased(){
 	if(key == 's'){
 		sPressed = false;
 	}
+	/*if(key == CODED){
+		if(keyCode == UP){
+			shoot = false;
+		}
+	}*/
 }
 
 public void mouseClicked(){
 	bullet.add(new Bullet(ship));
-}
+} 

@@ -6,14 +6,14 @@ class Asteroid extends Floater
 
 		rotSpeed = (int)(Math.random()*2)-1;
 		myColor = 127;
-      	corners = 40;
-      	int[] yS = {1,1,3,3,7,7,9,9,13,13,15,15,13,13,7,7,3,3,1,1,   -1,-1,-3,-3,-7,-7,-13,-13,-15,-15,-13,-13,-9,-9,-7,-7,-3,-3,-1,-1};
-      	int[] xS = {19,15,15,5,3,9,9,-3,5,3,3,-13,-13,-11,-7,-11,-11,-9,-9,-13,     -13,-9,-9,-11,-11,-7,-11,-13,-13,3,3,5,-3,9,9,3,5,15,15,19};
+      	corners = 5;
+      	int[] yS = {2,4,0,-5,-3};
+      	int[] xS = {4,-1,-4,-2,3};
       	xCorners = xS;
      	yCorners = yS;
     	for(int i = 0; i<corners; i++){
-        	xCorners[i]*=1.3;
-        	yCorners[i]*=1.3;
+        	xCorners[i]*=5;
+        	yCorners[i]*=5;
       	}
       	myCenterX = Math.random()*width;
       	myCenterY = Math.random()*height;
